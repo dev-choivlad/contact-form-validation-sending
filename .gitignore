@@ -2,7 +2,7 @@
 node_modules/
 docs/
 .idea
-
+phpmailer
 
 ### macOS ###
 # General
