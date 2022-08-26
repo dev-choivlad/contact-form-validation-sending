@@ -138,6 +138,25 @@
 
       this.showError(property, error);
     }
+
+    sendFormData(formData) {
+      let xhr = new XMLHttpRequest();
+      xhr.open("POST", "/sendmail.php");
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            // JS logic that handles successful data submission
+            alert("The form has been submitted")
+          }
+          if (xhr.status === 500) {
+            // JS logic that handles failed submission
+            alert("Oops! Check you internet connection")
+          }
+        }
+      };
+      xhr.send(formData);
+    }
   }
 
   // Get collection of all forms on the page
