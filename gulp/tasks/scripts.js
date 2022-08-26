@@ -7,7 +7,7 @@ const mode = require('gulp-mode')();
 const paths = require('../paths');
 
 const jsFiles = [
-  './././app/js/contact-form.js',
+  './././app/js/form-handler.js',
 ] // очередность подключения файлов
 
 const scripts = () => {

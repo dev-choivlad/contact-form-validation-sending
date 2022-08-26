@@ -1,4 +1,7 @@
 .main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -6,6 +9,7 @@
   color: $color-primary;
   font-family: $font-text-light;
   font-size: 15px;
+  padding: 0 20px;
 }
 
 .button-basic {
@@ -14,6 +18,7 @@
   align-items: center;
   height: 40px;
   width: 110px;
+  background-color: $bg-color;
   border: 1px solid #c7c7c7;
   border-radius: $border-radius;
 
@@ -26,7 +31,6 @@
 }
 
 .contact-form {
-  @include centering-xy;
   max-width: 500px;
   width: 100%;
 }
@@ -94,10 +98,14 @@
   opacity: 0;
   transition: all .3s ease;
 
-  &.active {
+  &--shown {
     visibility: visible;
     opacity: 1;
   }
+}
+
+.input-group--submit {
+  padding-top: 15px;
 }
 
 .input-group__button {
@@ -106,4 +114,5 @@
 
 .input-group__error--submit {
   position: relative;
+  font-size: 16px;
 }
