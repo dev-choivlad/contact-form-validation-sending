@@ -1,0 +1,30 @@
+<div class="main-container">
+  <form id="form" class="contact-form" name="feedback" action="sendmail.php" method="POST" novalidate>
+    <!-- Name -->
+    <div class="input-group">
+      <label class="input-group__label" for="input-name">Name</label>
+
+      <input id="input-name" class="input-group__input" type="text" name="name" minlength="2" maxlength="30" required="required">
+
+      <span class="input-group__error"></span>
+    </div>
+
+    <!-- Email -->
+    <div class="input-group">
+      <label class="input-group__label" for="input-email">Email</label>
+
+      <input id="input-email" class="input-group__input" type="email" name="email" required="required">
+
+      <span class="input-group__error"></span>
+    </div>
+
+    <!-- Text -->
+    <div class="input-group">
+      <label class="input-group__label" for="textarea"></label>
+
+      <textarea id="textarea" class="input-group__input" name="message" rows="10" minlength="20" maxlength="500" required="required"></textarea>
+
+      <span class="input-group__error"></span>
+    </div>
+  </form>
+</div>

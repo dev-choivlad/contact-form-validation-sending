@@ -1,0 +1,60 @@
+$maxWidth: 1920;
+
+@mixin adaptive-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+// parallax slide transition
+@mixin transition($time, $property: all, $easing: ease-in) {
+  transition: $property $time $easing;
+}
+
+// for ::before and ::auto
+@mixin pseudo($pos: absolute, $content: '', $display: block) {
+  position: $pos;
+  content: $content;
+  display: $display;
+}
+
+@mixin centering-xy() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centering-x() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin centering-y() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+} // .box { @include transform(rotate(30deg)); }
+
+@mixin background-clip {
+  background-clip: padding-box;
+}
+
+@mixin border-radius($topLeft, $topRight, $bottomRight, $bottomLeft) {
+  -webkit-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+  -moz-border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+  border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+}// .box { @include border-radius(6px, 6px, 6px, 6px); }
+
+@mixin combined-radius($topLeft, $topRight, $bottomRight, $bottomLeft) {
+  @include background-clip;
+  @include border-radius($topLeft, $topRight, $bottomRight, $bottomLeft);
+}
+
