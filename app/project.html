@@ -20,11 +20,18 @@
 
     <!-- Text -->
     <div class="input-group">
-      <label class="input-group__label" for="textarea"></label>
+      <label class="input-group__label" for="textarea">Message</label>
 
       <textarea id="textarea" class="input-group__input" name="message" rows="10" minlength="20" maxlength="500" required="required"></textarea>
 
       <span class="input-group__error"></span>
+    </div>
+
+    <!-- Submit -->
+    <div class="input-group input-group--submit">
+      <button class="button-basic input-group__button" type="submit">Submit</button>
+
+      <span class="input-group__error input-group__error--submit"></span>
     </div>
   </form>
 </div>
