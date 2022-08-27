@@ -3,7 +3,8 @@
 Button click event and input blur event validation.  
 Data sending via `XMLHttpRequest` without reloading the page.
 
-#### Stack: `HTML`, `SASS`, `JS`, `PHP`, `PHPMailer`
+#### Stack: 
+`HTML`, `SASS`, `JS`, `PHP`, `PHPMailer`
 
 
 ### How to use:
