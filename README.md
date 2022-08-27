@@ -1,5 +1,6 @@
 # Contact form
 ### validation with JS and sending with PHPMailer.
+Form has a "Name", "Email" input fields and Text area.  
 Button click event and input blur event validation.  
 Data sending via `XMLHttpRequest` without reloading the page.
 
