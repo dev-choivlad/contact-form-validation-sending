@@ -1,12 +1,12 @@
 # Contact form
-###validation with JS and sending with PHPMailer.
+### validation with JS and sending with PHPMailer.
 Button click event and input blur event validation.  
 Data sending via `XMLHttpRequest` without reloading the page.
 
-####Stack: `HTML`, `SASS`, `JS`, `PHP`, `PHPMailer`
+#### Stack: `HTML`, `SASS`, `JS`, `PHP`, `PHPMailer`
 
 
-###How to use:
+### How to use:
 * clone this repo
 * open terminal and type npm i
 * get phpmailer [here](https://github.com/PHPMailer/PHPMailer)  
