@@ -123,7 +123,7 @@
     validBlurField(e) {
       const target = e.target;
 
-      // Name attribute of the input field that lost focus
+      // Get name attribute of the input field that lost focus
       const property = target.getAttribute("name");
       // Name attribute value
       const value = target.value;
@@ -140,6 +140,7 @@
     }
 
     sendFormData(formData) {
+      alert("The form has been submitted")
       let xhr = new XMLHttpRequest();
       xhr.open("POST", "/sendmail.php");
 
@@ -147,10 +148,12 @@
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             // JS logic that handles successful data submission
+            // Reset all input fields, etc
             alert("The form has been submitted")
           }
           if (xhr.status === 500) {
-            // JS logic that handles failed submission
+            // JS logic that handles failed data submission
+            // Show form feedback alert, etc
             alert("Oops! Check you internet connection")
           }
         }
